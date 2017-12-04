@@ -1,0 +1,46 @@
+<ion-header>
+    <ion-navbar align-title="center" color="accent-color">
+        <ion-buttons>
+            <button ion-button (tap)="cerrarModal()">Cerrar</button>
+        </ion-buttons>
+    </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+    <form [formGroup]="formulario">
+        <ion-item>
+            <ion-label color="secondary">Marca Carro</ion-label>
+            <ion-input formControlName="marca" placeholder="Marca" type="text"></ion-input>
+        </ion-item>
+        <ion-item *ngIf="!formulario.controls.marca.valid  && (formulario.controls.marca.dirty || submitAttempt)">
+            <p>Introduce una marca valida (Máximo 12 carácteres)</p>
+        </ion-item>
+        <ion-item>
+            <ion-label color="secondary">Nombre del propietario</ion-label>
+            <ion-input formControlName="propietario" placeholder="Nombre" type="text"></ion-input>
+        </ion-item>
+        <ion-item *ngIf="!formulario.controls.propietario.valid  && (formulario.controls.propietario.dirty || submitAttempt)">
+            <p>Introduce un propietario valido (Máximo 12 carácteres)</p>
+        </ion-item>
+        <ion-item>
+            <ion-label color="secondary">Placas</ion-label>
+            <ion-input formControlName="placas" placeholder="Placas" type="text"></ion-input>
+        </ion-item>
+        <ion-item *ngIf="!formulario.controls.placas.valid  && (formulario.controls.placas.dirty || submitAttempt)">
+            <p>Introduce placas validas (Máximo 8 carácteres)</p>
+        </ion-item>
+        <ion-item>
+            <ion-label color="secondary">No de estacionamiento </ion-label>
+            <ion-input formControlName="numero" placeholder="#" type="phone"></ion-input>
+        </ion-item>
+        <ion-item *ngIf="!formulario.controls.numero.valid  && (formulario.controls.numero.dirty || submitAttempt)">
+            <p>Introduce número validas (Solo números)</p>
+        </ion-item>
+    </form>
+    <button ion-button [disabled]="!formulario.valid" (tap)="agregarAuto()" full round color="accent-secondary-color">
+        Agregar
+    </button>
+
+</ion-content>

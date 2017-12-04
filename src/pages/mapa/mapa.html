@@ -1,0 +1,48 @@
+<ion-header>
+
+  <ion-navbar color="primary">
+    <ion-title>{{Titulo}}</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content class="card-background-page">
+  <!--<ion-card>
+    <img [src]="imagen" />
+    <div class="card-title">{{Titulo}}</div>
+  </ion-card>
+-->
+  <ion-card color="primary">
+    <!--<ion-card-header>
+      ¿Como funciona?
+    </ion-card-header>
+    <ion-card-content>
+      Usted tiene de dos sopas; como es una simulacion usted debe de decir si debemos de meter o sacar los carros
+    </ion-card-content>-->
+    <ion-list>
+      <button ion-item *ngFor="let auto of autos">
+        <ion-avatar item-left>
+          <ion-icon name="ios-car"></ion-icon>
+        </ion-avatar>
+        {{auto.marca}} {{auto.propietario}} {{auto.placas}} {{auto.numero}}
+      </button>
+    </ion-list>
+
+    <ion-fab right bottom>
+      <button ion-fab color="primary" (click)="meterCarro()">
+        <ion-icon name="md-add"></ion-icon>
+      </button>
+    </ion-fab>
+    <ion-fab left bottom>
+      <button ion-fab color="red" (click)="eliminarAuto()"  [disabled]="autos.length < 1">
+        <ion-icon name="md-trash"></ion-icon>
+      </button>
+    </ion-fab>
+  </ion-card>
+
+  <!--<button ion-button (click)="MeterCarro()" color="primary">Meter Carro</button>
+  <button ion-button (click)= "SacarCarro()"color="primary">Sacar Carro</button>-->
+
+
+</ion-content>

@@ -1,0 +1,44 @@
+<ion-header>
+  <ion-navbar color="danger">
+
+    <ion-title text-center>Estacionamiento </ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+  <ion-card color="danger">
+    <ion-card-header>
+      ¿Como funciona?
+    </ion-card-header>
+    <ion-card-content>
+      Usted tiene que dar la opcion de cual estacionamiento quiere si la de los profesores o alumnos una vez pucheado(xD) a una
+      de las dos opciones tu seras el sistema de que sabe quien mete y quien se va del estacionamiento
+    </ion-card-content>
+  </ion-card>
+  <ion-card (tap)="mapas(1)">
+    <img src="assets/imgs/parkingreserved.jpg" />
+    <ion-card-content >
+      <ion-card-title>
+        Estacionamiento de alumnos
+      </ion-card-title>
+      <p>
+        Este estacionamiento es para los alumnos baaa.... pero esta atras de la escuela cerca de las canchas ;) tiene una magnifica
+        vista hacia el cerro
+      </p>
+    </ion-card-content>
+  </ion-card>
+  
+  <ion-card (tap)="mapas(2)">
+  <img src="assets/imgs/parkingreservedprofesor.jpg" />
+  <ion-card-content >
+    <ion-card-title>
+      Estacionamiento de profesores
+    </ion-card-title>
+    <p>
+      Este estacionamiento exclusivo para los profesores aunque la neta he visto alumnos estacionandose en ese lugar asi que total
+      si nadie se da cuenta pos alv :v
+    </p>
+  </ion-card-content>
+  </ion-card>
+  pd:esto le fata detalles no nos critiquen plots xD y no pregunten por que playstation gracias :D
+</ion-content>

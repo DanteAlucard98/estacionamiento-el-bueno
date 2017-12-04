@@ -1,0 +1,8 @@
+{
+  "name": "EstacionApp",
+  "app_id": "5e7f4bf4",
+  "type": "ionic-angular",
+  "integrations": {
+    "cordova": {}
+  }
+}
